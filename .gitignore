@@ -1,6 +1,9 @@
-node_modules
 backend/.env
 backend/node_modules/
+
+# Ignore frontend build artifacts
+frontend/node_modules/
+frontend/dist/
 
 # Logs
 logs
