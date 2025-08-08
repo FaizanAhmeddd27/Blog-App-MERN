@@ -11,5 +11,8 @@
     "express-fileupload": "^1.5.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.0"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
