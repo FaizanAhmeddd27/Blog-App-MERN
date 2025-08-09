@@ -15,7 +15,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:4002/api/blogs/singleBlog/${id}`);
+        const { data } = await axios.get(`/api/blogs/singleBlog/${id}`);
         setBlog(data.blog);
       } catch (error) {
         console.error("Error fetching blog:", error);

@@ -31,7 +31,7 @@ function CreateBlog() {
     formData.append("blogImage", blogImage);
     try {
       const { data } = await axios.post(
-        "http://localhost:4002/api/blogs/create",
+        "/api/blogs/create",
         formData,
         {
           withCredentials: true,

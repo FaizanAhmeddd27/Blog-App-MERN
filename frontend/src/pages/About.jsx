@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth } from "../context/AuthProvider";
 
 function About() {
-  const { profile, loading } = useAuth(); // ✅ Correct hook usage
+  const { profile, loading } = useAuth(); 
 
   if (loading) {
     return (
