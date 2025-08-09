@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 // CORS for frontend access
 app.use(cors({
-  origin: 'http://localhost:3001', // or use process.env.FRONTEND_URL
+  origin: 'process.env.FRONTEND_URL', // or use process.env.FRONTEND_URL
   credentials: true,
 }));
 
