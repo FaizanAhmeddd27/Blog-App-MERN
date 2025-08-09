@@ -65,6 +65,13 @@ app.use((err, req, res, next) => {
   });
 });
 
+
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus: true,
+    error: false
+  })
+})
 // Start Server 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
