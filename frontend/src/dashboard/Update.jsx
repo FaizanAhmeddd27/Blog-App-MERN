@@ -17,7 +17,7 @@ const Update = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const { data } = await axios.get(`/api/blogs/singleBlog/${id}`, {
+        const { data } = await axios.get(`https://theinkspark.onrender.com/api/blogs/singleBlog/${id}`, {
           withCredentials: true,
         });
         const blog = data.blog;

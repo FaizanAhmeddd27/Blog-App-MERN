@@ -19,7 +19,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("/api/users/login", data);
+      const res = await axios.post("https://theinkspark.onrender.com/api/users/login", data);
       // console.log("Login successful:", res.data);
       toast.success("Login Successful")
       setAuthenticated(true)

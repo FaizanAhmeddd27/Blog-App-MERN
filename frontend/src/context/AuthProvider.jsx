@@ -13,8 +13,8 @@ export const AuthProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const [blogsRes, profileRes] = await Promise.all([
-          axios.get("/api/blogs/allBlogs", { withCredentials: true }),
-          axios.get("/api/users/myProfile", { withCredentials: true }),
+          axios.get("https://theinkspark.onrender.com/api/blogs/allBlogs", { withCredentials: true }),
+          axios.get("https://theinkspark.onrender.com/api/users/myProfile", { withCredentials: true }),
         ]);
 
         setBlogs(blogsRes.data);

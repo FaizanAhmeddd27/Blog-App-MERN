@@ -8,7 +8,7 @@ function Creator() {
   useEffect(() => {
     const fetchAdmins = async () => {
       try {
-        const { data } = await axios.get("/api/users/admins", {
+        const { data } = await axios.get("https://theinkspark.onrender.com/api/users/admins", {
           withCredentials: true,
         });
         // console.log(data);

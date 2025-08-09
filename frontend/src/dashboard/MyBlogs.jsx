@@ -20,7 +20,7 @@ const MyBlogs = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get(`/api/blogs/myBlogs/${userId}`, {
+      const response = await axios.get(`https://theinkspark.onrender.com/api/blogs/myBlogs/${userId}`, {
         withCredentials: true,
       });
       setMyBlogs(response.data.blogs || []);
@@ -72,7 +72,7 @@ const MyBlogs = () => {
 
     if (window.confirm('Are you sure you want to delete this blog?')) {
       try {
-        await axios.delete(`/api/blogs/delete/${blogId}`, {
+        await axios.delete(`https://theinkspark.onrender.com/api/blogs/delete/${blogId}`, {
           withCredentials: true,
         });
         setMyBlogs((prev) => prev.filter((blog) => blog._id !== blogId));

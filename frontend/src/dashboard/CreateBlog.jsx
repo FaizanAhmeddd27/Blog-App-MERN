@@ -31,7 +31,7 @@ function CreateBlog() {
     formData.append("blogImage", blogImage);
     try {
       const { data } = await axios.post(
-        "/api/blogs/create",
+        "https://theinkspark.onrender.com/api/blogs/create",
         formData,
         {
           withCredentials: true,

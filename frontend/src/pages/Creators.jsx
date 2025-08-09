@@ -8,7 +8,7 @@ const Creators = () => {
   useEffect(() => {
     const fetchAdmins = async () => {
       try {
-        const { data } = await axios.get('/api/users/admins', {
+        const { data } = await axios.get('https://theinkspark.onrender.com/api/users/admins', {
           withCredentials: true,
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
