@@ -15,6 +15,7 @@ import Update from './dashboard/Update'
 import { Toaster } from "react-hot-toast";
 import { toastOptions } from '../toastConfig'
 import { Navigate } from 'react-router-dom'
+import Detail from './components/Detail'
 
 const App = () => {
   const { profile, authenticated } = useAuth();
@@ -46,6 +47,7 @@ const App = () => {
           />
           <Route path="/creators" element={<Creators />} />
           <Route path="/update/:id" element={<Update />} />
+          <Route path="/blog/:id" element={<Detail />} /> 
 
         </Routes>
 

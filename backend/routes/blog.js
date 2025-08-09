@@ -10,7 +10,7 @@ const router = express.Router();
 router.post('/create', authUser, authAdmin("admin") , createBlog);
 router.delete('/delete/:id', authUser, authAdmin("admin"), deleteBlog);
 router.get('/allBlogs',  getAllBlogs);
-router.get('/singleBlog/:id', authUser, getSingleBlog);
+router.get('/singleBlog/:id',  getSingleBlog);
 router.get('/myBlogs/:id', authUser,authAdmin("admin"), myBlogs)
 router.put('/update/:id',authUser, authAdmin("admin"), updateBlog);
 export default router;

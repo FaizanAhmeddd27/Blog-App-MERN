@@ -1,9 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ image, title, adminName, adminPhoto, category, about }) => {
+const Card = ({ id, image, title, adminName, adminPhoto, category, about }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/blog/${id}`); 
+  };
+
   return (
-    <div className="w-64 sm:w-44 md:w-52 lg:w-64 bg-white rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md hover:shadow-[0_10px_25px_rgba(0,0,0,0.4)] group">
-
+    <div
+      onClick={handleClick}
+      className="cursor-pointer w-64 sm:w-44 md:w-52 lg:w-64 bg-white rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md hover:shadow-[0_10px_25px_rgba(0,0,0,0.4)] group"
+    >
       <figure className="h-40 sm:h-36 overflow-hidden">
         <img
           src={image}
@@ -18,14 +27,10 @@ const Card = ({ image, title, adminName, adminPhoto, category, about }) => {
             {category}
           </span>
         )}
-
         <h2 className="text-base font-semibold text-gray-800 line-clamp-2">
           {title}
         </h2>
-
-        {about && (
-          <p className="text-sm text-gray-600 line-clamp-2">{about}</p>
-        )}
+        {about && <p className="text-sm text-gray-600 line-clamp-2">{about}</p>}
       </div>
 
       <div className="flex items-center gap-3 px-3 pb-4">

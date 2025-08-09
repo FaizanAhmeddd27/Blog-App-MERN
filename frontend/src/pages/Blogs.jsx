@@ -5,6 +5,7 @@ import DevotionalCard from "../components/DevotionalCard";
 
 function Blogs() {
   const { blogs } = useAuth();
+  console.log(blogs);
   const allBlogs = blogs?.allBlogs || [];
 
   return (
@@ -52,7 +53,7 @@ function Blogs() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 rounded-2xl"></div>
                       
                       <DevotionalCard
-                        image={blog.blogImage?.url || "/placeholder.jpg"}
+                        image={blog.blogImage?.url || "/placeholder.jpg"}a
                         title={blog.title}
                         adminName={blog.adminName || "Unknown"}
                         adminPhoto={blog.adminPhoto || "/default-user.png"}
